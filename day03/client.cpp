@@ -14,7 +14,7 @@ int main() {
     struct sockaddr_in serv_addr;
     bzero(&serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = inet_addr("52.184.67.156");
+    serv_addr.sin_addr.s_addr = inet_addr("服务器IP");
     serv_addr.sin_port = htons(8080);
 
     errif(connect(sockfd, (sockaddr*)&serv_addr, sizeof(serv_addr)) == -1, "socket connect error");
